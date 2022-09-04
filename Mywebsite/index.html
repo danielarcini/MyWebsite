@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,12 +27,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <title>FindDaniel| Software</title>
+    <title>FoundDaniel | Software</title>
   </head>
 
   <body>
     <!-- Navbar -->
-        <nav>
+        <nav class = "navbar" id = "nav">
             <h1>Daniel Arciniega</h1>
             <ul class = "navigation">
                 <li><a href= "#about" class = "nav-link">About</a></li>
@@ -39,7 +40,6 @@
                 <!-- <li><a href= "#projects" class = "nav-link">Projects</a></li> -->
                 <li><a href= "#contact" class = "nav-link">Contact</a></li>
                 <li><a href="Resume2.0.pdf" download="Daniel_Arciniega's_Resume">resume</a></li>
-
             </ul>
             <button class = "burger-menu" id = "burger-menu">
                 <ion-icon class = "bars" name ="menu-outline"></ion-icon>
@@ -50,54 +50,65 @@
     <section class="hero" >
         <div class ="title animate_animated animate_shakeX">
             <p class = "bio-title">Hello, I'm <b>Daniel Arciniega</b>.</p>
-            <p class ="bio-textf"> I'm a Student at ASU, One year left then ill graduate with a CS Degree</p>
+            <p class ="bio-textf"> I'm a Student at ASU, Majoring in Computer Science</p>
             <a href="#about" class="btn"> View More</a>
         </div>
     </section>
     <!-- More about -->
     <section class = "about" id="about">
-        <h1 id="about"> About</h1>
-        <div class = "about-images">
-
-            <div class = "intu animate__animated animate__pulse">
+        <h1 id="about"> ABOUT</h1>
+        <div class = "about-images" id = "about-img">
+            <div class = "intu animate__animated animate__fadeInLeft">
                 <img 
                 src="assets/icons/intuitive.png"
                 alt=""
                 loading="lazy" 
-                class="icon1"
+                class="self_icon"
                 />
                 <span class="caption"> Intuitive </span>
+                <div class = "pro"> Easy to use Software & hierarchies. </div>
             </div>
-            <div class = "fast animate__animated animate__pulse">
+            <div class = "fast animate__animated animate__fadeInTopLeft">
                 <img 
                 src="assets/icons/fast.png"
                 alt=""
                 loading="lazy" 
-                class="icon2"
+                class="self_icon"
                 />
-                <span class="caption"> fast </span>
-                <p> I hate you</p>
+                <span class="caption"> Fast </span>
+                <div class = "pro"> Fast speed with zero bugs is my highest priority.</div>
             </div>
-            <div class = "proactive animate__animated animate__pulse">
+            <div class = "proactive animate__animated animate__fadeInTopRight">
                 <img 
                 src="assets/icons/proactive.png"
                 alt=""
                 loading="lazy" 
-                class="icon1"
+                class="self_icon"
                 />
                 <span class="caption"> Proactive </span>
-                <p> Dedicated to make sure problems are solved before they arrive</p>
+                <div class = "pro"> Dedicated to anticipate any possible chance of an unexpected problem arising from my code.</div>
+            </div>
+            <div class = "ProblemSolving animate__animated animate__fadeInRight">
+              <img 
+              src="assets/icons/ProblemSolving.png"
+              alt=""
+              loading="lazy" 
+              class="self_icon"
+              />
+              <span class="caption"> Problem-Solving </span>
+              <div class = "pro"> Determination to resolve any bugs or problems in the software.</div class = "pro">
             </div>
         </div>
-        <p>
-            I currently go to school for Computer Science. I am profecient in java, C++, C, MySQL. I have experience in CSS, HTML, Python, javascript and many more.
-        </p>
-        <p>
-            another paragraph 
-        </p>
-        <p>
-            a third paragraph. akdjfa;lkjfdlak fsafasfafasfasf
-        </p>
+        <div class ="myself animate__animated animate__fadeInLeft">
+            <img 
+              src="assets/images/pfp.png"
+              alt=""
+              loading="lazy" 
+              class="pfp"
+              />
+              <span class = "caption"> Who am I ?</span>
+              <div class = "pro"> I'm a Student at Arizona State University in Tempe, Arizona. Im fascinated by software & I want to help in creating programs or algorithms to help user experience. </div>
+      </div>
     </section>
 
     <!-- Skills section -->
@@ -200,9 +211,9 @@
         <h2>Get In Touch With Me</h2>
         <div class="contact-form-container">
           <div class="contact-form">
-            <form action="https://formspree.io/f/xyylngw" method="POST">
+            <form action="https://formspree.io/f/xoqbjvrb" method="POST">
               <div class="form-control">
-                <label for="name">Name</label>
+                <label for="name"></label>
                 <input
                   type="text"
                   id="name"
@@ -213,18 +224,18 @@
                 />
               </div>
               <div class="form-control">
-                <label for="email">Email</label>
+                <!-- <label for="email">Email</label> -->
                 <input
                   type="email"
                   id="email"
                   name="sender-email"
-                  placeholder="Enter Your Email"
+                  placeholder="Enter Your Email" 
                   class="input-field"
                   required
                 />
               </div>
               <div class="form-control">
-                <label for="message">Message</label>
+                <label for="message"></label>
                 <textarea
                   id="message"
                   cols="60"
@@ -247,32 +258,37 @@
       </section>
 
     <!-- Social accounts - Fixed to the right -->
-    <div class="socials">
-        <a href="#" target="_blank"
-          ><img
-            src="assets/icons/icons8-twitter-circled.gif"
-            alt="Twitter"
-            loading="lazy"
-            class="socicon"
-        /></a>
-        <a href="#" target="_blank"
-          ><img
-            src="assets/icons/icons8-instagram.gif"
-            alt="Instagram"
-            loading="lazy"
-            class="socicon"
-        /></a>
-        <a href="#" target="_blank"
-          ><img
-            src="assets/icons/icons8-linkedin-circled.gif"
-            alt="Linkedin"
-            loading="lazy"
-            class="socicon"
-        /></a>
-        <a href="#" target="_blank"
-          ><img src="assets/icons/icons8-github.gif" alt="Github" class="socicon"
-        /></a>
-    </div>
+    <section class="social" id="social">
+        <div class="socials">
+            <a href="#" target="_blank"
+              ><img
+                src="assets/icons/twitter.png"
+                alt="Twitter"
+                loading="lazy"
+                class="socicon socia"
+            /></a>
+            <a href="#" target="_blank"
+              ><img
+                src="assets/icons/instagram.png"
+                alt="Instagram"
+                loading="lazy"
+                class="socicon socia"
+            /></a>
+            <a href="https://www.linkedin.com/in/daniel-arciniega-9a2a401a0/" target="_blank"
+              ><img
+                src="assets/icons/linkedin.png"
+                alt="Linkedin"
+                loading="lazy"
+                class="socicon socia"
+            /></a>
+            <a href="https://github.com/danielarcini" target="_blank"
+              ><img src="assets/icons/github.png" 
+              alt="Github" 
+              loading="lazy"
+              class="socicon socia"
+            /></a>
+        </div>
+    </section>
 
     <!-- Scroll to top 
     <i class="scroll-up" id="scroll-up"
