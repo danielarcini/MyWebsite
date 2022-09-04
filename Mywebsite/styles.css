@@ -6,10 +6,10 @@
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
-  --bg-color: #000000; /* bg = background*/
-  --body-color: #1d1d1d;
+  --bg-color: #1c2738; /* bg = background*/
+  --body-color: #000000;
   --primary-color: #ffffff;
-  --secondary-color: #1a0d91;
+  --secondary-color: #a1123d;
   --third-color: #0d54be;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
@@ -28,7 +28,8 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 2px solid red; */
+  /*border: 2px solid red; */
+  
 }
 
 ul {
@@ -47,7 +48,7 @@ a:hover {
 
 body {
   font-family: var(--font-family);
-  background-color: var(--body-color);
+  background-color: var(--bg-color);
 }
 html {
   scroll-padding-top: 49.5px; /* height of sticky header */
@@ -63,8 +64,9 @@ nav {
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
   background-color: var(--bg-color);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+  box-shadow: 0 3px 5px rgba(37, 118, 172, 0.1);
   height: 50px;
+  border-bottom: 3px solid #2f95c4;
 }
 
 nav h1{
@@ -74,9 +76,14 @@ nav a {
   color: var(--primary-color);
   transition: var(--transition);
 }
+
 nav a:hover {
   color: var(--secondary-color);
   border-bottom: 2px solid var(--secondary-color);
+  
+}
+a.active {
+	color: var(--secondary-color)
 }
 
 nav ul{
@@ -136,7 +143,7 @@ nav ul li {
   border: 2px solid rgb(253, 252, 252);
 }
 .hero .btn:hover {
-  background-color: rgb(30, 149, 179);
+  background-color: rgb(35, 139, 139);
   color: white;
   cursor: pointer;
 }
@@ -163,76 +170,134 @@ nav ul li {
 }
 /* about sections */
 .about {
-  color: var(--primary-color);
+  color: rgb(255, 255, 255);
   padding: 1rem 6rem;
-  
+  padding-bottom: 200px;
+  background-color: rgba(61, 59, 59, 0.247)
 }
-/*for the intuitive, fast and icon */
-.icon1 {
-  width: 6rem;
-  height: 6rem;
-  
+.about h1{
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+  font-size: 50px;
+  text-decoration: underline;
+  text-underline-offset: .5em;
 }
+
+/*for the intuitive, fast, proactive and problem solving */
+.self_icon {
+  width: 10rem;
+  height: 10rem;
+}
+
 .intu{
   vertical-align: top;
   display: inline-block;
   text-align: center;
-  width: 120px;
+  height: auto;
+  margin: 0 50px 0 50px; 
 }
 
-.icon2 {
-  width: 5rem;
-  height: 6rem;
-}
 .fast{
   vertical-align: top;
   display: inline-block;
   text-align: center;
-  width: 120px;
-
+  margin: 0 50px 0 50px; 
 }
+
 .proactive{
   vertical-align: top;
   display: inline-block;
-  text-align: center;
-  width: 120px;
+  text-align: center; 
+  margin: 0 50px 0 50px; 
 
 }
+
+.ProblemSolving {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  margin: 0 50px 0 50px; 
+
+}
+
 
 .caption{
   display: block;
+  font: bold;
+  font-size: 27.5px;
+  max-width: 100%;
 }
+
+
 .about-images {
   text-align: center;
+  margin-bottom: 30px;
+  margin-top: 70px; 
 }
 
-.about-images p{
-  text-align: center;
+.about-images .pro {
+  text-align:center;
   display: inline-block;
+  font: 12pt;
+  border:transparent;
+  
+  margin-top: 10px;  
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 150px;
+  height: auto;
+  
+  
+  text-size-adjust: auto;
+  word-spacing: 0px;
+  justify-content: center;
+  display: flex;
 }
-/*about me text */
-.about h1{
-  margin-bottom: var(--bottom-margin);
+
+
+
+/*pfp of myself & text */
+.pfp {
+  width: 20rem;
+  height: 20rem;
+}
+.myself {
+  position: relative;
+  display: flex;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+.myself .caption {
+  
+  display: block;
+  margin-left: 120px;
+  max-width: auto;
+  margin-bottom: 20px;  
+}
+.myself .pro {
+  margin-left: 0;
+  max-width: 333px;
   text-align: center;
+  border: transparent;
 }
-.about p{
-  line-height: var(--line-height);
-  padding: 0.4rem;
-  text-align: justify;
-}
-
-
 
 /*skills section */
 .skills {
-  color: var(--primary-color);
-  max-width: 68.75rem;
+  color: #ffffff;
+  font-size: 30px;
   margin: auto;
   text-align: center;
-  margin-top: 2.5rem;
+  padding-top: 5rem;
+  padding-bottom: 20rem;
+
+  background-color: rgba(78, 79, 87, 0.322);
+
 }
 .skill-header {
-  margin-bottom: 1rem;
+  margin-bottom: 15rem;
+  text-decoration: underline;
+  text-underline-offset: .5em;
 }
 .skills-wrapper img{
   padding: 1.25rem;
@@ -298,63 +363,77 @@ nav ul li {
 
 /*contact form */
 .contact {
-  margin-top: 2rem;
+  padding-top: 5rem;
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 250px;
+  
 }
 .contact h2 {
   text-align: center;
-  color: var(--primary-color);
   margin-bottom: var(--bottom-margin-2);
+  color: rgba(58, 55, 55, 0.904);
+  font-weight: bolder;
+  font-size: 40px;
+  text-decoration: underline;
+  text-underline-offset: .5em;
+  padding-bottom: 30px;
   
 }
 .contact-form-container {
   max-width: 40.75rem;
   margin: 0 auto;
-  padding: 0.938rem;
+  padding: 0.9238rem;
   border-radius: 5px;
-  box-shadow: 0 3px 10px var(--primary-shadow);
-  background-color: var(--body-color);
+  /*box-shadow: 0 3px 10px var(--primary-shadow);*/
+  
+ 
+  
 }
-.contact-form-container label {
+/*.contact-form-container label {
   line-height: 2.7em;
   font-weight: var(--bold-font);
   color: var(--third-color);
-}
+}*/
 .contact-form-container textarea {
   min-height: 6.25rem;
   font-size: 14px;
-  background-color: var(--body-color);
 }
 .contact-form-container .input-field {
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border-radius: 1px;
   border: none;
-  border: 2px outset var(--third-color);
-  font-size: .875rem;
+ /* border: 2px outset var(--third-color);*/
+  font-size: .975rem;
   outline: none;
-  background-color: var(--body-color);
-  color:white;
+  background-color: #888f92;
+  color: white;
 }
 .input-field::placeholder {
-  padding: 0.5rem;
-  color: var(--primary-color);
+  padding: 0.25rem;
+  color: #ffffff;
+  background-color: #888f92;
 }
 .submit-btn{
-  width: 100%;
+  width: 20%;
   padding: 10px;
   margin: 10px 0;
   color:#ffffff;
-  background-color: var(--body-color);
-  border: 2px solid var(--third-color);
-  border-radius: 5px;
+  background-color: #888f92;
+  border: 3px solid #2f95c4;
+  border-radius: 0px;
   font-size: 1rem;
   font-weight: var(--bold-font);
   transition: var(--transition);
+  margin-left: 500px;
+  position: relative;
 }
 .submit-btn:hover {
-  background-color: var(--third-color);
-  border: 2px solid var(--third-color);
+  background-color: red;
+  /*border: 2px solid var(--third-color);*/
   cursor: pointer;
 }
 
@@ -362,22 +441,29 @@ nav ul li {
 
 .socials {
   display: flex;
-  flex-direction: column;
-  position: fixed;
-  right: .1%;
-  bottom: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  
+  
 }
 .socicon {
-  width: 2rem;
-  height: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.socia {
+  background-color: rgba(28, 102, 151, 0.719);
+  margin: 20px;
+  padding: 15px;
+  
 }
 
 /* footer section */
 footer {
-  background-color: var(--body-color);
+  background-color: #1c2738;
   padding: 1.25rem;
   text-align: center;
-  margin: 2rem 0 0;
   color: var(--primary-color)
 }
 
@@ -438,17 +524,59 @@ footer {
     width: 20.5rem;
   }
   .about {
-    margin-top: 2rem;
     padding: 1rem 3.5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .self_icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  .intu{
+    margin: 0 10px 0 10px; 
+  }
+  
+  .fast{
+    margin: 0 10px 0 10px; 
+  }
+  
+  .proactive{
+    margin: 0 10px 0 10px; 
+  }
+  
+  .ProblemSolving {
+    margin: 0 10px 0 10px; 
   }
 
   .about h1 {
     text-align: center;
+    font-size: 25px;
   }
-  .about p {
-    margin-top: 2rem;
-    padding: 1rem 3.5rem;
-    text-align: justify;
+  .about .pro {
+    text-align: center;
+    font-size: 9px;
+    max-width: 100px;
+  }
+  .caption{
+    font-size: 15px;
+  }
+  
+  .myself .caption {
+    font-size: 20px;
+  }
+  .myself .pro {
+    margin-left: 120px;
+    width: 150px;
+  }
+
+  .skills{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+  .skill-header {
+    font-size: smaller;
+    margin-bottom: 5rem;
   }
 
   .icon {
@@ -461,8 +589,23 @@ footer {
   .project-container {
     width: 20.875rem;
   }
+
+  .contact {
+    padding-bottom: 5rem;
+  }
   .contact-form-container {
     max-width: 23.75rem;
+  }
+
+  .contact h2 {
+    font-size: 25px;
+  }
+
+  .submit-btn{
+    width: 30%;
+    border-radius: none;
+    margin-left: 245px;
+    font-size: 8px;
   }
 }
 @media screen and (max-width: 420px) {
@@ -482,5 +625,10 @@ footer {
 
   .contact-form-container {
     max-width: 17.75rem;
+  }
+  .submit-btn{
+    width: 20%;
+    border-radius: 1px;
+    margin-left: 200px;
   }
 } 
