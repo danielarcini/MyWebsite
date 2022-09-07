@@ -172,9 +172,10 @@ nav ul li {
 .about {
   color: rgb(255, 255, 255);
   padding: 1rem 6rem;
-  padding-bottom: 200px;
-  background-color: rgba(61, 59, 59, 0.247)
-}
+  padding-bottom: 100px;
+  background-color: rgba(61, 59, 59, 0.247);
+  text-align: center; /* sets picture of my self to the center */
+}                     /* sets picture of my self to the center */ /*akdfja;lkjfd;kaljfa;klfja;lkfj;lkajf;lka*/
 .about h1{
   margin-bottom: var(--bottom-margin);
   text-align: center;
@@ -231,7 +232,7 @@ nav ul li {
 
 .about-images {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: 70px; 
 }
 
@@ -258,25 +259,26 @@ nav ul li {
 
 /*pfp of myself & text */
 .pfp {
+  
   width: 20rem;
   height: 20rem;
 }
 .myself {
-  position: relative;
-  display: flex;
+  /*border: 2px solid rgb(253, 252, 252);*/
+  margin-top: 150px; 
+  margin-bottom: 0px; 
+  margin-right: auto;
+  margin-left: auto;
   display: inline-block;
   vertical-align: top;
-  text-align: left;
+  text-align: center;
 }
 .myself .caption {
   
   display: block;
-  margin-left: 120px;
-  max-width: auto;
-  margin-bottom: 20px;  
+  max-width: auto; 
 }
 .myself .pro {
-  margin-left: 0;
   max-width: 333px;
   text-align: center;
   border: transparent;
@@ -289,13 +291,13 @@ nav ul li {
   margin: auto;
   text-align: center;
   padding-top: 5rem;
-  padding-bottom: 20rem;
+  padding-bottom: 7rem;
 
   background-color: rgba(78, 79, 87, 0.322);
 
 }
 .skill-header {
-  margin-bottom: 15rem;
+  margin-bottom: 7.5rem;
   text-decoration: underline;
   text-underline-offset: .5em;
 }
@@ -310,8 +312,8 @@ nav ul li {
   background-color: var(--body-color);
   border-radius: 11px;
   box-shadow: 0px 3px 10px var(--primary-shadow);
-  padding: 20px;
   margin: 10px;
+
 }
 
 /*project section*/
@@ -447,6 +449,7 @@ nav ul li {
   
   
 }
+
 .socicon {
   width: 3.5rem;
   height: 3.5rem;
@@ -457,28 +460,136 @@ nav ul li {
   margin: 20px;
   padding: 15px;
   
+} 
+
+.socicon:before {
+	font-family: 'ecoicon';
+	font-size: 48px;
+	line-height: 90px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: block;
+	-webkit-font-smoothing: antialiased;
 }
+.socicon:after {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content: '';
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+}
+.socia:before {
+	content: "";
+}
+.hi-icon-effect-5 .socicon {
+  box-shadow: 0 0 0 4px rgba(255,255,255,1);
+	overflow: hidden;
+	-webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+	-moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+	transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.hi-icon-effect-5a .socicon:hover:before {
+	-webkit-animation: toRightFromLeft 0.3s forwards;
+	-moz-animation: toRightFromLeft 0.3s forwards;
+	animation: toRightFromLeft 0.3s forwards;
+}
+.hi-icon-effect-5 .socicon:hover {
+  background: rgb(43, 214, 214);
+	color: #702fa8;
+	box-shadow: 0 0 0 8px rgba(255,255,255,0.3);
+  transform: translateY(-10px);
+}
+
+.hi-icon-effect-5 .socicon:after {
+  display: none;
+}
+
+@-webkit-keyframes toRightFromLeft {
+	49% {
+		-webkit-transform: translate(100%);
+	}
+	50% {
+		opacity: 0;
+		-webkit-transform: translate(-100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes toRightFromLeft {
+	49% {
+		-moz-transform: translate(100%);
+	}
+	50% {
+		opacity: 0;
+		-moz-transform: translate(-100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+@keyframes toRightFromLeft {
+	49% {
+		transform: translate(100%);
+	}
+	50% {
+		opacity: 0;
+		transform: translate(-100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+
+/* scroll function */
+
+.scroll:hover {
+  background-color: rgb(43, 214, 214);
+  /*border: 2px solid var(--third-color);*/
+  cursor: pointer;
+}
+.scroll-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: -5px;
+
+  /*position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;*/
+}
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+} 
 
 /* footer section */
 footer {
   background-color: #1c2738;
   padding: 1.25rem;
   text-align: center;
-  color: var(--primary-color)
+  color: var(--primary-color);
+  margin-bottom: 25px;
 }
 
-/* scroll function
-.scroll-up {
-  position: fixed;
-  right: 0.5%;
-  bottom: 3%;
-  cursor: pointer;
-}
+@media screen and (max-width: 1470px) {
+  /*changes reflects on screen with a width of 1920px and below*/
+  .self_icon {
+    width: 7rem;
+    height: 7rem;
+  }
 
-.up-arrow {
-  width: 3rem;
-  height: 3rem;
-} */
+
+}
 
 
 @media screen and (max-width: 720px) {

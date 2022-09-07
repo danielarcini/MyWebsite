@@ -1,5 +1,6 @@
+
 // scroll to top functionality
-/*
+
 const scrollUp = document.querySelector("#scroll-up");
 
 scrollUp.addEventListener("click", () => {
@@ -8,7 +9,7 @@ scrollUp.addEventListener("click", () => {
     left: 0,
     behavior: "smooth",
   });
-}); */
+}); 
 
 // Nav hamburgerburger selections
 
@@ -29,3 +30,10 @@ navLink.forEach((link) =>
     ul.classList.remove("show");
   })
 );
+
+var selector = '.navigation a';
+
+$(selector).on('click', function(){
+    $(selector).removeClass('active');
+    $(this).addClass('active');
+});
