@@ -259,7 +259,6 @@ nav ul li {
 
 /*pfp of myself & text */
 .pfp {
-  
   width: 20rem;
   height: 20rem;
 }
@@ -274,14 +273,15 @@ nav ul li {
   text-align: center;
 }
 .myself .caption {
-  
   display: block;
   max-width: auto; 
+  margin-bottom: 10px;
 }
 .myself .pro {
-  max-width: 333px;
+  
+  display: inline-block;
+  max-width: 180px; 
   text-align: center;
-  border: transparent;
 }
 
 /*skills section */
@@ -319,12 +319,50 @@ nav ul li {
 /*project section*/
 .projects {
   padding: 32px 0;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 .project-pic {
-  width: 65%;
-  height: 60%;
+  width: 100%;
+  height: 100%; 
+  
+  /*display: inline-block;*/
+  /*width: 30rem;
+  height: 20rem;*/
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ffffff;
+}
+.project-container:hover .overlay{
+  opacity: 1;
+}
+
+.project-title {
+  /*margin-bottom: var(--bottom-margin);*/
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 15px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .projects-container {
   display: flex;
   align-items: center;
@@ -334,35 +372,59 @@ nav ul li {
   color: var(--primary-color);
   text-align: center;
   margin-bottom: 1rem;
+  display: block;
 }
 .project-container {
   text-align: center;
   width: 21.875rem;
-  padding: 1rem;
+  /*padding: 1rem;*/
   color: var(--primary-color);
-}
-.project-container p {
-  
-  padding: .4rem;
+  display: inline-block;
+  position: relative;
 }
 
-.project-title {
-  margin-bottom: var(--bottom-margin);
+.project-details  {
+  color: var(--secondary-color);
+  font-size: 19px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
-.project-details {
-  margin-bottom: var(--bottom-margin);
-}
+/*
 .project-card {
-  background-color: var(--body-color);
-  border-radius: 11px;
-  box-shadow: 0 3px 10px var(--primary-shadow);
-  padding: 20px;
+  background-color: #000000;
+  border-radius: 11px; 
+  box-shadow: 0 3px 6px var(--primary-shadow);
+  padding: 5px; 
   margin: 10px;
-}
+} */
 .project-link {
-  color: var(--third-color);
-}
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 
+
+  width: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  border: 3px solid var(--secondary-color);
+}
+.projects-container .project-link:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+}
 /*contact form */
 .contact {
   padding-top: 5rem;
@@ -620,14 +682,14 @@ footer {
   nav ul.show {
     transform: translateX(0);
   }
+
   .hero {
     
     margin-top: -4rem;
     flex-direction: column;
     gap: 0;
-
     height: 37.5rem;
-    width: 30rem;
+    /*width: 100%;*/
   }
 
   .title {
@@ -674,11 +736,11 @@ footer {
   }
   
   .myself .caption {
-    font-size: 20px;
+    font-size: 24px;
   }
   .myself .pro {
-    margin-left: 120px;
-    width: 150px;
+    font-size: 12px;
+    max-width: 160px;
   }
 
   .skills{
