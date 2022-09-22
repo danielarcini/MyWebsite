@@ -324,12 +324,10 @@ nav ul li {
   text-align: center;
 }
 .project-pic {
-  width: 100%;
-  height: 100%; 
-  
-  /*display: inline-block;*/
-  /*width: 30rem;
-  height: 20rem;*/
+  width: 45rem;
+  height: 27.5rem;
+  text-align: center;
+  margin:auto;
 }
 
 .overlay {
@@ -338,8 +336,8 @@ nav ul li {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
-  width: 100%;
+  width: 45rem;
+  height: 27.5rem;
   opacity: 0;
   transition: .5s ease;
   background-color: #ffffff;
@@ -367,6 +365,8 @@ nav ul li {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+
 }
 .projects-title{
   color: var(--primary-color);
@@ -376,7 +376,6 @@ nav ul li {
 }
 .project-container {
   text-align: center;
-  width: 21.875rem;
   /*padding: 1rem;*/
   color: var(--primary-color);
   display: inline-block;
@@ -643,14 +642,23 @@ footer {
   margin-bottom: 25px;
 }
 
+
+
 @media screen and (max-width: 1470px) {
   /*changes reflects on screen with a width of 1920px and below*/
   .self_icon {
     width: 7rem;
     height: 7rem;
   }
+  .project-pic {
+    width: 40rem;
+    height: 22.5rem;
+  } 
+  .overlay {
+    width: 40rem;
+    height: 22.5rem;
 
-
+  }
 }
 
 
@@ -751,16 +759,26 @@ footer {
     font-size: smaller;
     margin-bottom: 5rem;
   }
-
   .icon {
     width: 5.875rem;
     height: 5.25rem;
   }
+
   .projects-container {
     flex-direction: column;
-  }
+  } 
+  /*
   .project-container {
     width: 20.875rem;
+  }*/
+  .project-pic {
+    width: 20rem;
+    height: 11rem;
+  } 
+  .overlay {
+    width: 20rem;
+    height: 11rem;
+
   }
 
   .contact {
@@ -803,5 +821,14 @@ footer {
     width: 20%;
     border-radius: 1px;
     margin-left: 200px;
+  }
+
+  .project-pic {
+    width: 15rem;
+    height: 8rem;
+  } 
+  .overlay {
+    width: 15rem;
+    height: 8rem;
   }
 } 

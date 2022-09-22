@@ -31,6 +31,7 @@ navLink.forEach((link) =>
   })
 );
 
+//makes nav link stick during seleciton
 var selector = '.navigation a';
 
 $(selector).on('click', function(){
