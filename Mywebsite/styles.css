@@ -324,7 +324,7 @@ nav ul li {
   text-align: center;
 }
 .project-pic {
-  width: 45rem;
+  width: 35rem;
   height: 27.5rem;
   text-align: center;
   margin:auto;
@@ -336,8 +336,9 @@ nav ul li {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 45rem;
+  width: 35rem;
   height: 27.5rem;
+
   opacity: 0;
   transition: .5s ease;
   background-color: #ffffff;
@@ -651,11 +652,11 @@ footer {
     height: 7rem;
   }
   .project-pic {
-    width: 40rem;
+    width: 28rem;
     height: 22.5rem;
   } 
   .overlay {
-    width: 40rem;
+    width: 28rem;
     height: 22.5rem;
 
   }
