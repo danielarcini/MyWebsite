@@ -324,21 +324,21 @@ nav ul li {
   text-align: center;
 }
 .project-pic {
-  width: 33rem;
+  width: 32rem;
   height: 27.5rem;
   text-align: center;
   margin:auto;
+  
 }
 
 .overlay {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: .15rem; /* relative to the padding in .project-container */
   right: 0;
-  width: 33rem;
+  width: 32rem;
   height: 27.5rem;
-
   opacity: 0;
   transition: .5s ease;
   background-color: #ffffff;
@@ -375,9 +375,10 @@ nav ul li {
   margin-bottom: 1rem;
   display: block;
 }
+
 .project-container {
   text-align: center;
-  /*padding: 1rem;*/
+  padding: .15rem;
   color: var(--primary-color);
   display: inline-block;
   position: relative;
@@ -652,14 +653,17 @@ footer {
     height: 7rem;
   }
   .project-pic {
-    width: 28rem;
-    height: 22.5rem;
+    width: 40rem;
+    height: 25rem;
   } 
   .overlay {
-    width: 28rem;
-    height: 22.5rem;
+    width: 40rem;
+    height: 25rem;
 
   }
+  .projects-container {
+    flex-direction: column;
+  } 
 }
 
 
